@@ -20,12 +20,14 @@ const categories = [
 // RENDER : <option value='development'>Development</option>
 
 const Create = () => {
+    // USE HISTORY TO REDIRECT
     const history = useHistory()
     // FIRESTORE
     const { addDocument, response } = useFirestore('projects')
     // GET USERS
     const { documents } = useCollection('users')
     const [users, setUsers] = useState([]);
+    //GET USER
     const { user } = useAuthContext()
 
     // FORM FIELDS VALUES
